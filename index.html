@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Page Title</title>
+  <meta name="description" content="A short description of this page.">
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #1b2430;
+      --muted: #5b6676;
+      --accent: #1f5fbf;
+      --accent-text: #ffffff;
+      --border: #dde2ea;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12161c;
+        --surface: #1a2029;
+        --text: #e8ecf2;
+        --muted: #9aa5b5;
+        --accent: #6ea2f0;
+        --accent-text: #0c1117;
+        --border: #2a3340;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a { color: var(--accent); }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .wrap { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+
+    header.site {
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+    header.site .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    .brand { font-weight: 700; font-size: 1.15rem; text-decoration: none; color: var(--text); }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--text); }
+
+    .hero { padding: 5rem 0 4rem; }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      max-width: 20ch;
+    }
+    .hero p { max-width: 60ch; color: var(--muted); font-size: 1.1rem; margin: 0 0 2rem; }
+
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.4rem;
+      border-radius: 6px;
+      background: var(--accent);
+      color: var(--accent-text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .button:hover { filter: brightness(1.08); }
+
+    section.block { padding: 3rem 0; border-top: 1px solid var(--border); }
+    section.block h2 { margin: 0 0 1.5rem; font-size: 1.6rem; }
+
+    .features { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+    .features h3 { margin: 0 0 0.4rem; font-size: 1.1rem; }
+    .features p { margin: 0; color: var(--muted); }
+
+    footer.site {
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 36rem) {
+      header.site .wrap { flex-direction: column; align-items: flex-start; }
+      .hero { padding: 3rem 0 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="#">Your Name</a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">What I do</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <h1>A clear headline that says what this page is for</h1>
+        <p>One or two sentences that explain who this is for and what they can do here. Replace this with your own text.</p>
+        <a class="button" href="#contact">Get in touch</a>
+      </section>
+
+      <section class="block" id="about">
+        <h2>About</h2>
+        <p>Use this section to describe yourself, your team, or your project in a short paragraph.</p>
+      </section>
+
+      <section class="block" id="features">
+        <h2>What I do</h2>
+        <div class="features">
+          <div>
+            <h3>First thing</h3>
+            <p>A short description of the first item.</p>
+          </div>
+          <div>
+            <h3>Second thing</h3>
+            <p>A short description of the second item.</p>
+          </div>
+          <div>
+            <h3>Third thing</h3>
+            <p>A short description of the third item.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:name@example.com">name@example.com</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">&copy; 2026 Your Name</div>
+  </footer>
+</body>
+</html>
